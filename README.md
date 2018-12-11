@@ -27,8 +27,13 @@ Using config: /usr/local/zookeeper/bin/../conf/zoo.cfg
 Starting zookeeper ... STARTED
 #
 
-## SCALA (2.11.x/2.12.x)
+## SCALA (2.11.x/2.12.x/2.13.x)
+Scala 2.11.12 - Released on November 9, 2017\
+Scala 2.12.6 - Released on April 27, 2018\
+Scala 2.13.0-M5 - Released on August 30, 2018\ 
+
 https://www.scala-lang.org/download/
+
 ### SBT
 https://piccolo.link/sbt-1.2.7.tgz
 
