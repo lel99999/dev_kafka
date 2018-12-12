@@ -1,5 +1,9 @@
 ---
 - hosts: all
+  vars:  
+    java_archive: jdk-8u191-linux-x64.tar.gz 
+    download_url: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+    path_archive: /usr/local/java/{{ java_archive }}
   become: yes
   become_method: sudo
   tasks:
@@ -7,3 +11,7 @@
       yum:
         name: libselinux-python
         state: present
+    - name: install java jdk 1.8.x
+#     become: yes
+#     become_method: sudo
+      command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{path_archive}}"      
