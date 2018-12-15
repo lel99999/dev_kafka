@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: kafkarh7
   vars:  
     java_archive: jdk-8u191-linux-x64.tar.gz 
     download_url: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
@@ -39,7 +39,12 @@
       command: "wget -q -O {{kafka_archive}} {{kafka_url}}"
 
     - name: move downloads
-      command: mv /home/vagrant/* /var
+      shell: |
+        "for i in /home/vagrant/*;do tar xvf $i;done"
+        mv `ls -d */jak*` /usr/java
+        mv `ls -d */*` /opt
+    
+#     command: mv /home/vagrant/* /var
 #     become: vagrant
 #     become_method: sudo
 #     command: mv ~/*.*gz /var/
