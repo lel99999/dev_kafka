@@ -41,16 +41,9 @@
     - name: move downloads
       shell: |
         "for i in /home/vagrant/*;do tar xvf $i;done"
-        mv `ls -d */jak*` /usr/java
-        mv `ls -d */*` /opt
+        mv `ls -d /home/vagrant/jdk*` /usr/java
+        mv `ls -d /home/vagrant/*` /opt
     
-#     command: mv /home/vagrant/* /var
-#     become: vagrant
-#     become_method: sudo
-#     command: mv ~/*.*gz /var/
-
-#   - name: unpack downloads
-#     command: for i in 
 #   - name: install zookeeper
 #     command:
 
