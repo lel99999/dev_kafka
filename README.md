@@ -10,7 +10,8 @@ Install The Following:
 [Download](https://zookeeper.apache.org/releases.html#download)
 [Information](https://www.apache.org/dyn/closer.cgi/zookeeper/)
 
-### Standalone Server Instructions using 3.4.13 (http://apache.mirrors.lucidnetworks.net/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz)
+### Standalone Server Instructions using 3.4.13 
+[Download](http://apache.mirrors.lucidnetworks.net/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz)
 ```
 # tar -xvf zookeeper-3.4.13.tar.gz
 # mv zookeeper-3.4.13 /usr/local/zookeeper
