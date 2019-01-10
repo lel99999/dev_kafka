@@ -70,13 +70,4 @@
 
     - name: start kafka server
       shell:  /opt/kafka_2.12-2.1.0/bin/kafka-server-start.sh /opt/kafka_2.12-2.1.0/config/server.properties
-#     command: mv /home/vagrant/* /var
-#     become: vagrant
-#     become_method: sudo
-#     command: mv ~/*.*gz /var/
-
-#   - name: unpack downloads
-#     command: for i in 
-#   - name: install zookeeper
-#     command:
 
