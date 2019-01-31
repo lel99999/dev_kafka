@@ -1,8 +1,8 @@
 ---
-- hosts: kafkarh7
+- hosts: kafkaRH7
   vars:  
-    java_archive: jdk-8u191-linux-x64.tar.gz 
-    download_url: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+    java_archive: jdk-8u201-linux-x64.tar.gz
+    download_url: https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz
     path_base: /usr/local/java
     path_archive: /usr/local/java/{{ java_archive }}
     scala_archive: scala-2.12.8.tgz
@@ -30,10 +30,10 @@
 #     command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{path_base}}"
 
     - name: extract java
-      shell: tar -xvf /home/vagrant/jdk-8u191-linux-x64.tar.gz -C /usr/java
+      shell: tar -xvf /home/vagrant/jdk-8u201-linux-x64.tar.gz -C /usr/java
 
     - name: create java symbolic link
-      shell: ln -s /usr/java/jdk1.8.0_191/bin/java /usr/bin/java
+      shell: ln -s /usr/java/jdk1.8.0_201/bin/java /usr/bin/java
 #     file:
 #       src: /usr/java/jdk1.8.0_191/bin/java
 #       dest: /usr/bin/java
@@ -65,8 +65,8 @@
         tar -xvzf /opt/scala-2.12.8.tgz -C /opt
         tar -xvzf /opt/zookeeper-3.4.12.tar.gz -C /opt
 
-    - name: start zookeeper service
-      shell: /opt/zookeeper-3.4.12/bin/zkServer.sh start
+#   - name: start zookeeper service
+#     shell: /opt/zookeeper-3.4.12/bin/zkServer.sh start
 
     - name: start kafka server
       shell:  /opt/kafka_2.12-2.1.0/bin/kafka-server-start.sh /opt/kafka_2.12-2.1.0/config/server.properties
