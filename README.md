@@ -1,6 +1,13 @@
 # dev_kafka
 Kafka Development
 
+##### NOTES
+
+##### Links
+- [https://kafka.apache.org/](https://kafka.apache.org/) <br/>
+- [https://github.com/apache/kafka](https://github.com/apache/kafka) <br/>
+
+##### Kafka Setup
 - - -
 Install The Following:
 ## JAVA 8
